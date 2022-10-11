@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+
+  <title>Frontend Mentor | QR code component</title>
+
+  <style>
+    :root {
+      --light_blue: hsl(212, 45%, 89%);
+      --light_gray: hsl(224, 5%, 60%);
+      --grayish_blue: hsl(220, 15%, 55%);
+      --dark_blue: hsl(218, 44%, 22%);
+    }
+
+    * { margin: 0px; padding: 0px; }
+
+    body {
+      background-color: var(--light_blue);
+      font-family: "Outfit", sans-serif, serif;
+    }
+
+    main {
+      height: 97vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section {
+      width: 270px;
+      height: 500px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 1px 1px 1px rgba(235, 233, 233, 0.822);
+    }
+
+    figure { padding-top: 15px; padding-left: 13px; }
+
+    #qr_code { border-radius: 10px; width: 245px; }
+
+    h3 {
+      color: var(--dark_blue);
+      margin-top: 15px;
+      margin-left: 15px;
+      margin-right: 15px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.3em;
+    }
+
+    main p {
+      color: var(--light_gray);
+      margin-top: 30px;
+      margin-left: 15px;
+      margin-right: 15px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    footer { font-size: 11px;  text-align: center; }
+
+    footer a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 375px), (max-height: 515px) {
+      section { width: 300px; height: 305px; }
+
+      figure { padding-top: 15px; padding-left: 65px; }
+
+      #qr_code { width: 170px; }
+
+      h3 { margin-top: 0px; }
+
+      main p {
+        margin-top: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <figure>
+          <img src="./images/image-qr-code.png" alt="QR Code" id="qr_code">
+      </figure>
+      <h3>
+        Improve your front-end skills by building projects
+      </h3>
+      <p>
+        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/ROSS1996">Robson Santana</a>.
+    </p>
+</footer>
+</body>
+</html>
