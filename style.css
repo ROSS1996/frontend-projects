@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:300,400,50,600,700,800");
+
+:root {
+    --bg-top-vertical: calc(100vh - 20);
+    --bg-top-horizontal: calc(100vw - 30);
+    --bg-bottom-vertical: calc(100vh - 20);
+    --bg-bottom-horizontal: calc(100vh - 30);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(185, 75%, 39%);
+    display: grid;
+    grid-template-rows: 1fr 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 98vh;
+}
+
+main {
+    font-family: 'Kumbh Sans', serif;
+    grid-row: 1;
+}
+
+footer { font-size: 11px;  text-align: center; grid-row: 2; }
+
+footer a { color: hsl(228, 45%, 44%); }
+
+#container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 350px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 160px 1fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#bg-top,
+#bg-bottom {
+    position: fixed;
+    z-index: -1;
+}
+
+#bg-top {
+    left: -100px;
+    top: -400px;
+}
+
+#bg-bottom {
+    right: -100px;
+    bottom: -400px;
+}
+
+#bg-card {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+#picture {
+    border-radius: 50%;
+    position: relative;
+    top: -80px;
+    left: 120px;
+    border: 5px solid white;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1;
+}
+
+#name {
+    font-weight: 700;
+}
+
+#age {
+    color: hsl(227, 10%, 46%);
+    font-weight: 400;
+}
+
+#location {
+    font-size: 0.9rem;
+    color: hsl(227, 10%, 46%);
+}
+
+#statistics {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-row: 3;
+    border-top: 1px solid hsl(0, 0%, 75%)
+}
+
+.stats-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    font-weight: 700;
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        align-items: center;
+    }
+  }
