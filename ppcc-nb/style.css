@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,50,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Fraunces:300,400,50,600,700,800");
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    grid-template-rows: 1fr 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 98vh;
+}
+
+main {
+    font-family: 'Montserrat', serif;
+    grid-row: 1;
+}
+
+footer { font-size: 11px;  text-align: center; grid-row: 2; }
+
+footer a { color: hsl(228, 45%, 44%); }
+
+#container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: fit-content;
+}
+
+#product {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 20%;
+}
+
+#product-info {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+#product-type {
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+    font-size: .5rem;
+    font-weight: 400;
+}
+
+#product-title {
+    color: hsl(212, 21%, 14%);
+    font-size: 1.5rem;
+}
+
+#product-description {
+    color: hsl(228, 12%, 48%);
+    font-size: 1rem;
+}
+
+#price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+#newPrice {
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#oldPrice {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+#cart-btn {
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    height: 1.9rem;
+}
+
+#cart-btn:active {
+    background-color: hsl(158, 36%, 17%)
+}
+
+#product-title,
+#newPrice {
+    font-family: 'Fraunces', serif;
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        align-items: center;
+    }
+    #product {
+        width: 300px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+    #container {
+        flex-direction: row;
+        width: fit-content;
+    }
+
+    #product-info {
+        width: 30vw;
+    }
+
+    #product-type {
+        font-size: .8rem;
+    }
+    #product-title {
+        font-size: 1.8rem;
+    }
+    #cart-btn {
+        height: 2.9rem;
+    }
+  }
