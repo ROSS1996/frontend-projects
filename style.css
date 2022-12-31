@@ -88,6 +88,8 @@ footer a { color: hsl(228, 45%, 44%); }
 }
 
 #name {
+    display: inline;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
