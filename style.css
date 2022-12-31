@@ -94,6 +94,10 @@ footer a { color: hsl(228, 45%, 44%); }
     font-weight: 700;
     cursor: pointer;
     height: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 #cart-btn:active {
