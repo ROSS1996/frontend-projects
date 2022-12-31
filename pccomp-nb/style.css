@@ -34,8 +34,8 @@ footer a { color: hsl(228, 45%, 44%); }
 #container {
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
-    width: 350px;
-    height: 400px;
+    width: 360px;
+    height: 380px;
     display: grid;
     grid-template-rows: 160px 1fr 1fr;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -119,6 +119,12 @@ footer a { color: hsl(228, 45%, 44%); }
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.stats-text {
+    color: hsl(227, 10%, 46%);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
 
 .number {
