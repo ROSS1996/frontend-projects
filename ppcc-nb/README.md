@@ -28,13 +28,14 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS Grid
 - Flexbox
 - Media queries
 ### Useful resources
 
-- [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) - This tutorial helped me in the usage of flexbox.
-- [Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) - This tutorial helped me in the usage of media queries.
-
+- [Grid](https://www.w3schools.com/css/css_grid.asp) - This tutorial helped me in the usage of Grid.
+- [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) - This tutorial helped me in the usage of Flexbox.
+- [Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) - This tutorial helped me in the usage of Media Queries.
 
 ## Author
 
