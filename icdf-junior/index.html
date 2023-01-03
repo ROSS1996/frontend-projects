@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div id="bgContainer">
+        <div id="cardsContainer">
+          <figure id="cardBack">
+            <img src="./images/bg-card-back.png" alt="card back" class="cardImages">
+            <span id="cardCVC">000</span>
+          </figure>
+          <figure id="cardFront">
+            <img src="./images/bg-card-front.png" alt="card front" class="cardImages">
+            <div class="doubleCircles">
+              <div class="circle" id="bigCircle"></div>
+              <div class="circle" id="smallCircle"></div>
+            </div>
+            <div id="cardNumber">0000 0000 0000 0000</div>
+            <div>
+              <span id="cardOwner">Jane Appleseed</span>
+              <span id="cardExpiry"><span id="expiryMM">00</span>/<span id="expiryYY">00</span></span>
+            </div>
+          </figure>
+        </div>
+    </div>
+    <div id="data">
+        <div id="cardInputs">
+          <form id="cardDetails">
+            <div class="column">
+              <label for="owner">Cardholder Name</label>
+              <input type="text" name="owner" id="owner" placeholder="e.g. Jane Appleseed" required>
+              <p class="invalidReason" id="feedbackOwner"></p>
+            </div>
+            <div class="column">
+              <label for="number">Card Number</label>
+              <input type="number" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" required>
+              <p class="invalidReason" id="feedbackNumber"></p>
+            </div>
+            <div class="row">
+              <div>
+                <label for="month">Exp. Date (MM/YY)</label>
+                <div class="row">
+                  <div class="column"><input type="number" name="month" id="month" placeholder="MM" min="1" max="12" maxlength="2" required><p class="invalidReason" id="feedbackMonth"></p></div>
+                  <div class="column"><input type="number" name="year" id="year" placeholder="YY" min="1" max="99" maxlength="2" required><p class="invalidReason" id="feedbackYear"></p></div>
+                </div>
+              </div>
+              <div class="column">
+                <label for="cvc">CVC</label>
+                <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" min="1" max="999" maxlength="3" required>
+                <p class="invalidReason" id="feedbackCVC"></p>
+              </div>
+            </div>
+            <button id="confirm">Confirm</button>
+          </form>
+        </div>
+        <div id="feedback" class="hidden">
+          <div id="feedbackCircle"><img src="./images/icon-complete.svg" alt=""></div>
+          <p id="thankYou">Thank You!</p>
+          <p id="feedbackText">We've added your card details</p>
+          <button id="continue">Continue</button>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/ROSS1996">Robson Santana</a>.
+    </p>
+</footer>
+<script src="script.js"></script>
+<script src="validator.js"></script>
+</body>
+</html>
