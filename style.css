@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgb(0, 178, 223);
+    border: 1px solid lightgray;
+    margin: 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+header h1 {
+    padding: 10px;
+}
+body {
+    background-color: rgb(220, 245, 219);
+}
+ol {
+    margin: 5px;
+    list-style-position: inside;
+}
+li {
+    font-size: 1.3rem;
+}
+a  {
+    color: black;
+}
+
+main {
+    padding: 5px;
+}
+
+#projectsList {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.screenshot {
+    width: 45vh;
+    border-radius: 4px 4px 0 0;
+}
+
+.project h2 {
+    font-family: monospace;
+    font-size: 1.4rem;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.links a {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.borderR {
+    border-right: 1px solid black;
+}
+
