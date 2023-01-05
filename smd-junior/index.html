@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Social Media Dashboard</h1>
+        <h2 class="topText">Total Followers: 23,004</h2>
+      </div>
+      <div class="switcher">
+        <span class="topText">Dark Mode</span>
+        <label class="switch">
+          <input type="checkbox" id="switchStatus" checked/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+    <section class="columns">
+      <div class="card overall" id="facebook">
+        <div class="socialMedia">
+          <img class="icon" src="./images/icon-facebook.svg" alt="" />
+          <span class="topText">@nathanf</span>
+        </div>
+        <div class="overallNumber">
+          <div class="followCount">1987</div>
+          <div class="followers">Followers</div>
+        </div>
+        <div class="variation">
+          <img src="./images/icon-up.svg" alt="" />
+          <div class="positive">12 Today</div>
+        </div>
+      </div>
+      <div class="card overall" id="twitter">
+        <div class="socialMedia">
+          <img class="icon" src="./images/icon-twitter.svg" alt="" />
+          <span class="topText">@nathanf</span>
+        </div>
+        <div class="overallNumber">
+          <div class="followCount">1044</div>
+          <div class="followers">Followers</div>
+        </div>
+        <div class="variation">
+          <img src="./images/icon-up.svg" alt="" />
+          <div class="positive">99 Today</div>
+        </div>
+      </div>
+      <div class="card overall" id="instagram">
+        <div class="socialMedia">
+          <img class="icon" src="./images/icon-instagram.svg" alt="" />
+          <span class="topText">@realnathanf</span>
+        </div>
+        <div class="overallNumber">
+          <div class="followCount">11k</div>
+          <div class="followers">Followers</div>
+        </div>
+        <div class="variation">
+          <img src="./images/icon-up.svg" alt="" />
+          <div class="positive">1099 Today</div>
+        </div>
+      </div>
+      <div class="card overall" id="youtube">
+        <div class="socialMedia">
+          <img class="icon" src="./images/icon-youtube.svg" alt="" />
+          <span class="topText">Nathan F.</span>
+        </div>
+        <div class="overallNumber">
+          <div class="followCount">8239</div>
+          <div class="followers">Subscribers</div>
+        </div>
+        <div class="variation">
+          <img src="./images/icon-down.svg" alt="" />
+          <div class="negative">144 Today</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 id="overview">Overview - Today</h2>
+      <div class="columns rows">
+        <div class="card metrics">
+          <div class="topText">Page Views</div>
+          <img class="icon" src="./images/icon-facebook.svg" alt="" />
+          <div class="metricCount">87</div>
+          <div class="variation">
+            <img src="./images/icon-up.svg" alt="" />
+            <div class="positive">3%</div>
+          </div>
+        </div>
+        <div class="card metrics">
+          <div class="topText">Likes</div>
+          <img class="icon" src="./images/icon-facebook.svg" alt="" />
+          <div class="metricCount">52</div>
+          <div class="variation">
+            <img src="./images/icon-down.svg" alt="" />
+            <div class="negative">2%</div>
+          </div>
+        </div>
+        <div class="card metrics">
+          <div class="topText">Likes</div>
+          <img class="icon" src="./images/icon-instagram.svg" alt="" />
+          <div class="metricCount">5462</div>
+          <div class="variation">
+            <img src="./images/icon-up.svg" alt="" />
+            <div class="positive">2257%</div>
+          </div>
+        </div>
+        <div class="card metrics">
+          <div class="topText">Profile Views</div>
+          <img class="icon" src="./images/icon-instagram.svg" alt="" />
+          <div class="metricCount">52k</div>
+          <div class="variation">
+            <img src="./images/icon-up.svg" alt="" />
+            <div class="positive">1375%</div>
+          </div>
+        </div>
+        <div class="card metrics">
+          <div class="topText">Retweets</div>
+          <img class="icon" src="./images/icon-twitter.svg" alt="" />
+          <div class="metricCount">117</div>
+          <div class="variation">
+            <img src="./images/icon-up.svg" alt="" />
+            <div class="positive">303%</div>
+          </div>
+        </div>
+        <div class="card metrics">
+          <div class="topText">Likes</div>
+          <img class="icon" src="./images/icon-twitter.svg" alt="" />
+          <div class="metricCount">507</div>
+          <div class="variation">
+            <img src="./images/icon-up.svg" alt="" />
+            <div class="positive">553%</div>
+          </div>
+        </div>
+        <div class="card metrics">
+          <div class="topText">Likes</div>
+          <img class="icon" src="./images/icon-youtube.svg" alt="" />
+          <div class="metricCount">107</div>
+          <div class="variation">
+            <img src="./images/icon-down.svg" alt="" />
+            <div class="negative">19%</div>
+          </div>
+        </div>
+        <div class="card metrics">
+          <div class="topText">Total Views</div>
+          <img class="icon" src="./images/icon-youtube.svg" alt="" />
+          <div class="metricCount">1407</div>
+          <div class="variation">
+            <img src="./images/icon-down.svg" alt="" />
+            <div class="negative">12%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="switch.js"></script>
+  </body>
+</html>
