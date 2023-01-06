@@ -36,8 +36,7 @@ body {
     background-color: var(--bg-color);
     font-family: 'Inter', serif;
     display: grid;
-    grid-template-rows: 1fr 2fr 3fr;
-    gap: 20px;
+    grid-template-rows: 30% 85%;
     align-items: center;
     justify-content: center;
 }
@@ -45,6 +44,14 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -274,13 +281,20 @@ input:checked+.slider:before {
         margin: auto;
         display: grid;
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         gap: 20px;
         height: 100vh;
+    }
+    main {
+        display: grid;
+        grid-template-rows: 46% 54%;
+        gap: 10px;
     }
     header, #overallSM, #overallMetrics {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        flex: 1;
     }
     #overallSM, #overallMetrics { 
         justify-content: center;
