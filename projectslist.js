@@ -3,6 +3,7 @@ const projects = [
     { name: 'Profile Card Component', folder: 'pccomp-nb' },
     { name: 'Product Preview Card', folder: 'ppcc-nb' },
     { name: 'Interactive card details', folder: 'icdf-junior' },
+    { name: 'Social Media Dashboard with Themes', folder: 'smdt-junior' },
 ]
 
 for (project of projects) {
