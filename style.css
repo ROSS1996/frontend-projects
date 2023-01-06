@@ -30,7 +30,9 @@
 }
 
 body {
-    padding: 100px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-inline: 10vw;
     background-color: var(--bg-color);
     font-family: 'Inter', serif;
     display: grid;
@@ -263,4 +265,31 @@ input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        padding: 10px;
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        height: 100vh;
+    }
+    header, #overallSM, #overallMetrics {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #overallSM, #overallMetrics { 
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
 }
