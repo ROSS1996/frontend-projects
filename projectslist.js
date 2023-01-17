@@ -1,9 +1,8 @@
 const projects = [
-    { name: 'QR Code', folder: 'qrcode' },
-    { name: 'Profile Card Component', folder: 'pccomp-nb' },
-    { name: 'Product Preview Card', folder: 'ppcc-nb' },
-    { name: 'Interactive card details', folder: 'icdf-junior' },
-    { name: 'Social Media Dashboard with Themes', folder: 'smdt-junior' },
+    { name: 'Profile Card Component', techs: ['HTML', 'CSS'], folder: 'pccomp-nb' },
+    { name: 'Product Preview Card', techs: ['HTML', 'CSS'], folder: 'ppcc-nb' },
+    { name: 'Interactive card details', techs: ['HTML', 'CSS', 'Javascript'], folder: 'icdf-junior' },
+    { name: 'Social Media Dashboard with Themes', techs: ['HTML', 'CSS', 'Javascript'], folder: 'smdt-junior' },
 ]
 
 for (project of projects) {
@@ -17,12 +16,32 @@ for (project of projects) {
     let projectName = document.createElement('h2')
     projectName.innerText = project.name
 
+
+
+
+    let techsList = document.createElement('ul')
+
+    project.techs.forEach(tech => {
+        let li = document.createElement('li')
+        li.innerText = tech
+        techsList.appendChild(li)
+    })
+
+    let techs = document.createElement('div')
+    techs.classList.add('techs')
+
+    let techsTitle = document.createElement('h3')
+    techsTitle.innerText = 'Techs'
+
+    techs.appendChild(techsTitle)
+    techs.appendChild(techsList)
+
+
     let links = document.createElement('div')
     links.classList.add('links')
 
     let github = document.createElement('p')
     github.innerText = 'Code'
-    github.classList.add('borderR')
     let githubLink = document.createElement('a')
     githubLink.href = 'https://github.com/ROSS1996/frontend-projects/tree/main/' + `${project.folder}`
     githubLink.target = '_blank'
@@ -31,17 +50,27 @@ for (project of projects) {
     live.innerText = 'Preview'
     let liveLink = document.createElement('a')
     liveLink.href = 'https://ross1996.github.io/frontend-projects/' + `${project.folder}`
+
     liveLink.target = '_blank'
+
+    let infos = document.createElement('div')
+    infos.classList.add('infos')
+
+    liveLink.appendChild(live)
+    githubLink.appendChild(github)
+    infos.appendChild(projectName)
+    infos.appendChild(techs)
+    infos.appendChild(githubLink)
+    infos.appendChild(liveLink)
+
 
     let div = document.createElement('div')
     div.classList.add('project')
 
-        liveLink.appendChild(live)
-    githubLink.appendChild(github)
-    links.appendChild(githubLink)
-    links.appendChild(liveLink)
+
     div.appendChild(screenshot)
-    div.appendChild(projectName)
-    div.appendChild(links)
+    div.appendChild(infos)
+
+
     main.appendChild(div)
 }
