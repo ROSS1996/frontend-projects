@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <h1>IP Address Tracker</h1>
+      <form method="GET" id="info">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search for any IP address or domain"
+        />
+        <button type="submit">></button>
+      </form>
+      <div id="data">
+        <div>
+          <h2>IP Address</h2>
+          <p id="ipAddress"></p>
+        </div>
+        <hr />
+        <div>
+          <h2>Location</h2>
+          <p id="location"></p>
+        </div>
+        <hr />
+
+        <div>
+          <h2>Timezone</h2>
+          <p id="timezone"></p>
+        </div>
+        <hr />
+
+        <div>
+          <h2>ISP</h2>
+          <p id="isp"></p>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+
+    <!-- add offset value dynamically using the API -->
+    <link rel="stylesheet" href="./leaflet.css" />
+    <script src="./leaflet.js"></script>
+    <script src="api.js"></script>
+  </body>
+</html>
