@@ -4,7 +4,7 @@ const markerIcon = L.icon({
 
 });
 
-let map = L.map('map').setView([51.505, -0.09], 13);
+let map = L.map('map', { zoomControl: false }).setView([51.505, -0.09], 13);
 var marker = L.marker([51.5, -0.09], { icon: markerIcon }).addTo(map);
 
 
@@ -15,8 +15,9 @@ const ipDOM = document.getElementById('ipAddress')
 const regionDOM = document.getElementById('location')
 const timezoneDOM = document.getElementById('timezone')
 const ispDOM = document.getElementById('isp')
-
 const info = document.getElementById('info')
+
+const inputField = document.getElementById('search')
 
 info.addEventListener('submit', function (event) {
     event.preventDefault()
@@ -31,14 +32,16 @@ function changeFields(ip) {
     info.then(data => {
         if (data.error) {
             alert(data.reason)
+        } else {
+            ipDOM.innerText = data.ip
+            regionDOM.innerText = `${data.city}, ${data.region}, ${data.country}`
+            timezoneDOM.innerText = data.timezone
+            ispDOM.innerText = data.org
+            map.setView([data.latitude, data.longitude], 13);
+            map.removeLayer(marker);
+            marker = L.marker([data.latitude, data.longitude], { icon: markerIcon }).addTo(map);
+            inputField.value = ''
         }
-        ipDOM.innerText = data.ip
-        regionDOM.innerText = data.region
-        timezoneDOM.innerText = data.timezone
-        ispDOM.innerText = data.org
-        map.setView([data.latitude, data.longitude], 13);
-        L.marker([data.latitude, data.longitude], { icon: markerIcon }).addTo(map);
-        console.log(data)
     }
     )
 }
