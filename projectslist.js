@@ -3,6 +3,7 @@ const projects = [
     { name: 'Product Preview Card', techs: ['HTML', 'CSS'], folder: 'ppcc-nb' },
     { name: 'Interactive card details', techs: ['HTML', 'CSS', 'Javascript'], folder: 'icdf-junior' },
     { name: 'Social Media Dashboard with Themes', techs: ['HTML', 'CSS', 'Javascript'], folder: 'smdt-junior' },
+    { name: 'IP Address Tracker', techs: ['HTML', 'CSS', 'Javascript'], folder: 'iptrack-int' },
 ]
 
 for (project of projects) {

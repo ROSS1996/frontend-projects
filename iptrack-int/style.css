@@ -13,12 +13,12 @@ body {
 #content {
   background-image: url(./images/pattern-bg.png);
   background-size: cover;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding-top: 20px;
+  padding-top: 5vh;
 }
 
 h1 {
@@ -53,25 +53,32 @@ form {
   font-weight: 700;
   border-radius: 0 10px 10px 0;
   font-size: 1.3rem;
+  cursor: pointer;
+  border: 0;
+}
+
+#info button:active {
+  background-color: hsl(0, 0%, 17%);
+  outline: 0;
+  border: 0;
 }
 
 #map {
   z-index: -1;
-  height: 64vh;
-  width: 100vw;
+  height: 75vh;
 }
 
 #data {
   position: relative;
-  bottom: 10%;
-  left: 2%;
-  width: 80vw;
+  top: 22%;
+  width: 80%;
   background-color: white;
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  gap: 10px;
 }
 
 #data div {
@@ -80,7 +87,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 15px;
 }
 
 #data div > h2 {
@@ -92,10 +98,78 @@ form {
 #data div p {
   font-size: 1.3rem;
   font-weight: 700;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 hr {
   height: 5rem;
   align-self: center;
   color: hsl(0, 0%, 17%);
+}
+
+@media only screen and (max-width: 800px) {
+  #data {
+    height: 10vh;
+    padding: 15px;
+  }
+  #info input {
+    width: 80vw;
+  }
+  #content h1 {
+    font-size: 1.3rem;
+  }
+  #data div > h2 {
+    font-size: 0.7rem;
+  }
+
+  #data div p {
+    font-size: 0.8rem;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #content form,
+  #content h1 {
+    position: relative;
+    top: 50%;
+  }
+
+  #data {
+    height: 50vh;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    top: 80%;
+  }
+
+  #data div {
+    width: 100%;
+  }
+
+  #data hr {
+    display: none;
+  }
+  #info input,
+  #info button {
+    height: 30px;
+  }
+  #info input {
+    font-size: 0.7rem;
+  }
+
+  #info button {
+    font-size: 0.8rem;
+  }
+  #data div h2 {
+    font-size: 0.55rem;
+  }
+  #data div p {
+    font-size: 0.7rem;
+  }
+
+  #data div p {
+    font-size: 0.6rem;
+  }
 }
