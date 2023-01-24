@@ -1,36 +1,80 @@
+import { useState } from "react"
+import Filter from "./components/filter";
 import Listings from "./components/listings"
 
 function App() {
+  const [filters, setFilters] = useState(
+    {
+      role: [],
+      level: [],
+      languages: [],
+      tools: []
+    }
+  )
 
+
+  function updateFilters(value, type) {
+    if (type === 'role') {
+      if (!filters.role.includes(value)) {
+        // Create a new object with the updated array
+        const updatedFilters = {
+          ...filters,
+          role: [...filters.role, value],
+        };
+        // Call setFilters with the new object
+        setFilters(updatedFilters);
+      }
+    }
+    if (type === 'level') {
+      if (!filters.level.includes(value)) {
+        // Create a new object with the updated array
+        const updatedFilters = {
+          ...filters,
+          level: [...filters.level, value],
+        };
+        // Call setFilters with the new object
+        setFilters(updatedFilters);
+      }
+    }
+    if (type === 'language') {
+      if (!filters.languages.includes(value)) {
+        // Create a new object with the updated array
+        const updatedFilters = {
+          ...filters,
+          languages: [...filters.languages, value],
+        };
+        // Call setFilters with the new object
+        setFilters(updatedFilters);
+      }
+    }
+    if (type === 'tool') {
+      if (!filters.tools.includes(value)) {
+        // Create a new object with the updated array
+        const updatedFilters = {
+          ...filters,
+          tools: [...filters.tools, value],
+        };
+        // Call setFilters with the new object
+        setFilters(updatedFilters);
+      }
+    }
+    if (type === 'clear') {
+      const updatedFilters = {
+        role: [],
+        level: [],
+        languages: [],
+        tools: []
+      };
+      setFilters(updatedFilters);
+    }
+  }
 
   return (
     <div className="h-screen font-leagueSpartan">
       <div className="h-1/5 bg-header-desktop bg-no-repeat bg-cover bg-desaturatedDark">
-        <div className="grid grid-cols-filter justify-between w-3/4 relative left-[12.5%] top-[80%] bg-white p-5 rounded drop-shadow-sm">
-          <ul className="flex flex-row gap-4">
-            <li className="flex flex-row gap-0">
-              <p className='rounded-l bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold'>
-                Frontend
-              </p>
-              <button className="rounded-r text-white bg-desaturatedDark hover:bg-vDarkGrayishCyan w-8 cursor:pointer font-bold">X</button>
-            </li>
-            <li className="flex flex-row gap-0">
-              <p className='rounded-l bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold'>
-                CSS
-              </p>
-              <button className="rounded-r text-white bg-desaturatedDark hover:bg-vDarkGrayishCyan w-8 cursor:pointer font-bold">X</button>
-            </li>
-            <li className="flex flex-row gap-0">
-              <p className='rounded-l bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold'>
-                React
-              </p>
-              <button className="rounded-r text-white bg-desaturatedDark hover:bg-vDarkGrayishCyan w-8 cursor:pointer font-bold">X</button>
-            </li>
-          </ul>
-          <p className="text-desaturatedDark font-bold cursor-pointer hover:underline">Clear</p>
-        </div>
+        < Filter filters={filters} updateFilters={updateFilters} />
       </div>
-      < Listings />
+      < Listings updateFilters={updateFilters} />
     </div>
   )
 }

@@ -1,7 +1,13 @@
 import jsonFile from '../assets/data.json'
 import { v4 as uniqueID } from 'uuid'
 
-export default function Listings() {
+export default function Listings(props) {
+
+    function setFilters(value, type) {
+        props.updateFilters(value, type)
+    }
+
+
     return (
         <div className='flex flex-col gap-6 bg-lightGrayishCyan py-20'>
             {jsonFile.map(job => (
@@ -25,16 +31,24 @@ export default function Listings() {
                         </div>
                     </div>
                     <ul className='flex flex-row gap-3'>
-                        <li className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white'>{job.role}</li>
-                        <li className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white'>{job.level}</li>
+                        <li className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'role') }}>
+                            {job.role}
+                        </li>
+                        <li className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'level') }}>{job.level}</li>
+                        {job.languages.length > 0 ? (
+                            job.languages.map((language, uniqueID) => (
+                                <li key={uniqueID} className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'language') }}>{language}</li>
+                            ))
+                        ) : undefined}
                         {job.tools.length > 0 ? (
                             job.tools.map((tool, uniqueID) => (
-                                <li className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white'>{tool}</li>
+                                <li key={uniqueID} className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'tool') }}>{tool}</li>
                             ))
                         ) : undefined}
                     </ul>
                 </div>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     )
 }
