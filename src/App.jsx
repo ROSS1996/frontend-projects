@@ -1,26 +1,32 @@
 import Layout from "./components/layout";
 import styles from "./assets/styles/Index.module.css";
+import Shorter from "./components/shorter";
+
+import illustration from "./assets/images/illustration-working.svg";
 
 function App() {
   return (
     <Layout>
-      <div>
-        <h2>More than just shorter links</h2>
-        <p>
-          Build your brand’s recognition and get detailed insights on how your
-          links are performing.
-        </p>
-        <button>Get Started</button>
+      <div className={styles.description}>
+        <div>
+          <h2>More than just shorter links</h2>
+          <p>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <button>Get Started</button>
+        </div>
+        <img src={illustration} alt="Illustration" />
       </div>
-      <form>
-        <input type="text" name="" id="" placeholder="Shorten a link here..." />
-        <button>Shorten It!</button>
-      </form>
-      <p>
-        Advanced Statistics Track how your links are performing across the web
-        with our advanced statistics dashboard.
-      </p>
-      <div>
+      <Shorter />
+      <div className={styles.statistics}>
+        <h2>Advanced Statistics</h2>
+        <p>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+      </div>
+      <div className={styles.features}>
         <div>
           <h2>Brand Recognition</h2>
           <p>
@@ -43,8 +49,8 @@ function App() {
           </p>
         </div>
       </div>
-      <div>
-        Boost your links today
+      <div className={styles.boost}>
+        <h2>Boost your links today</h2>
         <button>Get Started</button>
       </div>
     </Layout>

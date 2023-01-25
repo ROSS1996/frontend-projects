@@ -1,0 +1,29 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer span {
+  padding: 0;
+}
+
+.footer span:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+}
+
+.linksList {
+  display: flex;
+  flex-direction: row !important;
+  gap: 50px !important;
+}
+
+.logo {
+  padding: 10px;
+}
