@@ -4,7 +4,7 @@ const projects = [
     { name: 'Interactive card details', techs: ['HTML', 'CSS', 'Javascript'], folder: 'icdf-junior' },
     { name: 'Social Media Dashboard with Themes', techs: ['HTML', 'CSS', 'Javascript'], folder: 'smdt-junior' },
     { name: 'IP Address Tracker', techs: ['HTML', 'CSS', 'Javascript'], folder: 'iptrack-int' },
-    { name: 'IP Address Tracker', techs: ['HTML', 'CSS', 'Javascript', 'React', 'Tailwind', 'Vite'], folder: 'joblist-int' },
+    { name: 'Job listings with filter', techs: ['HTML', 'CSS', 'Javascript', 'React', 'Tailwind', 'Vite'], folder: 'joblist-int' },
 ]
 
 for (project of projects) {
