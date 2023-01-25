@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'header-desktop': "url('./images/bg-header-desktop.svg')",
-        'header-mobile': "url('./images/bg-header-mobile.svg')",
+        'header-desktop': "url('./assets/bg-header-desktop.svg')",
+        'header-mobile': "url('./assets/bg-header-mobile.svg')",
       },
       colors: {
         desaturatedDark: 'hsl(180, 29%, 50%)',
@@ -23,8 +23,8 @@ module.exports = {
       gridTemplateColumns: {
         // Complex site-specific column configuration
         filter: '1fr 50px',
-      }
-    }
+      },
+    },
   },
   plugins: [],
-}
+};
