@@ -16,9 +16,7 @@ export default function Filter(props) {
                         Object.entries(filterList).map(([key, values]) => (
                             values.map((value, uniqueID) => (
                                 <li key={uniqueID} className="flex flex-row gap-0">
-                                    <p className='rounded-l bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold'>
-                                        {value}
-                                    </p>
+                                    <p className='rounded-l bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold'>{value}</p>
                                     <button className="rounded-r text-white bg-desaturatedDark hover:bg-vDarkGrayishCyan w-8 cursor:pointer font-bold" onClick={() => removeFilters(value, key)}>X</button>
                                 </li>
                             ))

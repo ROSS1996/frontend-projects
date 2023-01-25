@@ -39,24 +39,37 @@ export default function Listings(props) {
                         </div>
                     </div>
                     <ul className='flex flex-row gap-3'>
-                        <li className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'role') }}>
+                        <li
+                            className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white'
+                            onClick={(e) => { setFilters(e.target.innerText, 'role') }}>
                             {job.role}
                         </li>
-                        <li className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'level') }}>{job.level}</li>
+                        <li
+                            className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white'
+                            onClick={(e) => { setFilters(e.target.innerText, 'level') }}>
+                            {job.level}
+                        </li>
                         {job.languages.length > 0 ? (
                             job.languages.map((language, uniqueID) => (
-                                <li key={uniqueID} className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'language') }}>{language}</li>
+                                <li
+                                    key={uniqueID} className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white'
+                                    onClick={(e) => { setFilters(e.target.innerText, 'languages') }}>
+                                    {language}
+                                </li>
                             ))
                         ) : undefined}
                         {job.tools.length > 0 ? (
                             job.tools.map((tool, uniqueID) => (
-                                <li key={uniqueID} className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white' onClick={(e) => { setFilters(e.target.innerText, 'tool') }}>{tool}</li>
+                                <li
+                                    key={uniqueID} className='rounded bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold cursor-pointer active:bg-desaturatedDark active:text-white'
+                                    onClick={(e) => { setFilters(e.target.innerText, 'tools') }}>
+                                    {tool}
+                                </li>
                             ))
                         ) : undefined}
                     </ul>
                 </div>
-            ))
-            }
+            ))}
         </div >
     )
 }
