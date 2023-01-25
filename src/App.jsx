@@ -31,8 +31,8 @@ function App() {
   }, [filters]);
 
   return (
-    <div className="font-leagueSpartan h-screen">
-      <div className="bg-header-desktop bg-desaturatedDark h-1/5 bg-cover bg-no-repeat">
+    <div className="font-leagueSpartan bg-lightGrayishCyan  h-screen">
+      <div className="bg-header-mobile bg-desaturatedDark md:bg-header-desktop h-1/5 bg-cover bg-no-repeat">
         <Filter filters={filters} updateFilters={updateFilters} />
       </div>
       <Listings filters={filters} updateFilters={updateFilters} />

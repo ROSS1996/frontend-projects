@@ -21,9 +21,9 @@ export default function Listings(props) {
   return (
     <div className="bg-lightGrayishCyan flex flex-col gap-12 py-20 lg:gap-6 ">
       {filteredItems.map((job) => (
-        <div key={job.id} className={`flex w-3/4 flex-col justify-between self-center rounded bg-white p-4 drop-shadow-lg md:gap-4 md:p-6 lg:flex-row lg:items-center ${job.featured ? 'border-desaturatedDark border-l-4' : undefined}`}>
-          <div className="flex flex-col gap-0 md:flex-row md:items-center md:gap-4">
-            <img src={job.logo} alt={job.company} className="absolute -top-7 block h-auto w-1/5 md:static lg:w-auto xl:h-auto" />
+        <div key={job.id} className={`flex w-3/4 flex-col justify-between self-center rounded bg-white p-4 drop-shadow-lg md:gap-4 md:p-6 min-[1000px]:flex-row lg:items-center ${job.featured ? 'border-desaturatedDark border-l-4' : undefined}`}>
+          <div className="flex flex-col gap-0 min-[600px]:flex-row md:items-center md:gap-4">
+            <img src={job.logo} alt={job.company} className="absolute -top-10 block h-auto w-14 md:static md:w-1/5 lg:w-auto xl:h-auto" />
             <div className="flex flex-col">
               <div className="flex flex-row gap-2">
                 <h1 className="text-desaturatedDark font-bold">{job.company}</h1>

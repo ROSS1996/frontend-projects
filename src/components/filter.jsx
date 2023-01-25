@@ -10,14 +10,14 @@ export default function Filter(props) {
 
   if (filters.role.length > 0 || filters.level.length > 0 || filters.languages.length > 0 || filters.tools.length > 0) {
     return (
-      <div className="grid-cols-filter relative left-[12.5%] top-[80%] grid w-3/4 justify-between rounded bg-white p-5 drop-shadow-sm">
-        <ul className="flex flex-row gap-4">
+      <div className="grid-cols-filter relative left-[12.5%] top-[80%] grid w-3/4 justify-between rounded bg-white p-3 drop-shadow-sm md:p-5">
+        <ul className="flex flex-row flex-wrap gap-4">
           {
                         Object.entries(filters).map(([key, values]) => (
                           values.map((value) => (
                             <li key={uniqueKey()} className="flex flex-row gap-0">
-                              <p className="bg-lightGrayishCyanTwo text-desaturatedDark rounded-l py-1 px-2 text-sm font-bold md:text-base">{value}</p>
-                              <button className="bg-desaturatedDark hover:bg-vDarkGrayishCyan cursor:pointer w-8 rounded-r text-sm font-bold text-white md:text-base" onClick={() => removeFilters(value, key)}>X</button>
+                              <p className="bg-lightGrayishCyanTwo text-desaturatedDark rounded-l py-1 px-2 text-xs font-bold md:text-base">{value}</p>
+                              <button className="bg-desaturatedDark hover:bg-vDarkGrayishCyan cursor:pointer w-8 rounded-r text-xs font-bold text-white md:text-base" onClick={() => removeFilters(value, key)}>X</button>
                             </li>
                           ))
                         ))
