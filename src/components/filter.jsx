@@ -1,30 +1,30 @@
-import { v4 as uniqueID } from "uuid"
-
+import React from 'react';
+import { v4 as uniqueKey } from 'uuid';
 
 export default function Filter(props) {
-    let filterList = props.filters
+  const { filters, updateFilters } = props;
 
-    function removeFilters(value, type) {
-        props.updateFilters(value, type, true)
-    }
+  function removeFilters(value, type) {
+    updateFilters(value, type, true);
+  }
 
-    if (filterList.role.length > 0 || filterList.level.length > 0 || filterList.languages.length > 0 || filterList.tools.length > 0) {
-        return (
-            <div className="grid grid-cols-filter justify-between w-3/4 relative left-[12.5%] top-[80%] bg-white p-5 rounded drop-shadow-sm">
-                <ul className="flex flex-row gap-4">
-                    {
-                        Object.entries(filterList).map(([key, values]) => (
-                            values.map((value, uniqueID) => (
-                                <li key={uniqueID} className="flex flex-row gap-0">
-                                    <p className='rounded-l bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold'>{value}</p>
-                                    <button className="rounded-r text-white bg-desaturatedDark hover:bg-vDarkGrayishCyan w-8 cursor:pointer font-bold" onClick={() => removeFilters(value, key)}>X</button>
-                                </li>
-                            ))
+  if (filters.role.length > 0 || filters.level.length > 0 || filters.languages.length > 0 || filters.tools.length > 0) {
+    return (
+      <div className="grid-cols-filter relative left-[12.5%] top-[80%] grid w-3/4 justify-between rounded bg-white p-5 drop-shadow-sm">
+        <ul className="flex flex-row gap-4">
+          {
+                        Object.entries(filters).map(([key, values]) => (
+                          values.map((value) => (
+                            <li key={uniqueKey()} className="flex flex-row gap-0">
+                              <p className="bg-lightGrayishCyanTwo text-desaturatedDark rounded-l py-1 px-2 text-sm font-bold md:text-base">{value}</p>
+                              <button className="bg-desaturatedDark hover:bg-vDarkGrayishCyan cursor:pointer w-8 rounded-r text-sm font-bold text-white md:text-base" onClick={() => removeFilters(value, key)}>X</button>
+                            </li>
+                          ))
                         ))
                     }
-                </ul>
-                <p className="text-desaturatedDark font-bold cursor-pointer hover:underline" onClick={() => removeFilters(undefined, 'all')}>Clear</p>
-            </div>
-        )
-    }
+        </ul>
+        <p className="text-darkGrayishCyan hover:text-desaturatedDark cursor-pointer text-sm font-bold underline-offset-2 hover:underline md:text-base" onClick={() => removeFilters(undefined, 'all')}>Clear</p>
+      </div>
+    );
+  }
 }
