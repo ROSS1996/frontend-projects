@@ -14,67 +14,25 @@ function App() {
 
 
   function updateFilters(value, type, remove = false) {
-    if (remove) {
-      if (type === 'all') {
-        const updatedFilters = {
-          role: [],
-          level: [],
-          languages: [],
-          tools: []
-        };
-        setFilters(updatedFilters);
-      } else {
-        const updatedFilters = { ...filters };
-        updatedFilters[type] = updatedFilters[type].filter(val => val !== value);
-        setFilters(updatedFilters);
-      }
+    const updatedFilters = { ...filters };
+    if (type === 'all') {
+      updatedFilters.role = [],
+        updatedFilters.level = [],
+        updatedFilters.languages = [],
+        updatedFilters.tools = []
     } else {
-      if (type === 'role') {
-        if (!filters.role.includes(value)) {
-          // Create a new object with the updated array
-          const updatedFilters = {
-            ...filters,
-            role: [...filters.role, value],
-          };
-          // Call setFilters with the new object
-          setFilters(updatedFilters);
-        }
-      }
-      if (type === 'level') {
-        if (!filters.level.includes(value)) {
-          // Create a new object with the updated array
-          const updatedFilters = {
-            ...filters,
-            level: [...filters.level, value],
-          };
-          // Call setFilters with the new object
-          setFilters(updatedFilters);
-        }
-      }
-      if (type === 'language') {
-        if (!filters.languages.includes(value)) {
-          // Create a new object with the updated array
-          const updatedFilters = {
-            ...filters,
-            languages: [...filters.languages, value],
-          };
-          // Call setFilters with the new object
-          setFilters(updatedFilters);
-        }
-      }
-      if (type === 'tool') {
-        if (!filters.tools.includes(value)) {
-          // Create a new object with the updated array
-          const updatedFilters = {
-            ...filters,
-            tools: [...filters.tools, value],
-          };
-          // Call setFilters with the new object
-          setFilters(updatedFilters);
-        }
+      switch (remove) {
+        case true:
+          updatedFilters[type] = updatedFilters[type].filter(val => val !== value);
+          break
+        case false:
+          !updatedFilters[type].includes(value) ? updatedFilters[type] = [...updatedFilters[type], value] : false
+          break
       }
     }
+    setFilters(updatedFilters);
   }
+
 
 
   return (
