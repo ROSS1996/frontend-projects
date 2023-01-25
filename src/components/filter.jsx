@@ -4,12 +4,8 @@ import { v4 as uniqueID } from "uuid"
 export default function Filter(props) {
     let filterList = props.filters
 
-    function showFilters(value) {
-        console.log(filterList)
-    }
-
-    function clearFilters() {
-        props.updateFilters(undefined, 'clear')
+    function removeFilters(value, type) {
+        props.updateFilters(value, type, true)
     }
 
     if (filterList.role.length > 0 || filterList.level.length > 0 || filterList.languages.length > 0 || filterList.tools.length > 0) {
@@ -23,13 +19,13 @@ export default function Filter(props) {
                                     <p className='rounded-l bg-lightGrayishCyanTwo py-1 px-2 text-desaturatedDark font-bold'>
                                         {value}
                                     </p>
-                                    <button className="rounded-r text-white bg-desaturatedDark hover:bg-vDarkGrayishCyan w-8 cursor:pointer font-bold">X</button>
+                                    <button className="rounded-r text-white bg-desaturatedDark hover:bg-vDarkGrayishCyan w-8 cursor:pointer font-bold" onClick={() => removeFilters(value, key)}>X</button>
                                 </li>
                             ))
                         ))
                     }
                 </ul>
-                <p className="text-desaturatedDark font-bold cursor-pointer hover:underline" onClick={() => clearFilters()}>Clear</p>
+                <p className="text-desaturatedDark font-bold cursor-pointer hover:underline" onClick={() => removeFilters(undefined, 'all')}>Clear</p>
             </div>
         )
     }

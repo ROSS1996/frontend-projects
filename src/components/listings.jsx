@@ -3,14 +3,22 @@ import { v4 as uniqueID } from 'uuid'
 
 export default function Listings(props) {
 
+    let filteredItems = jsonFile.filter(object => {
+        for (const [filterKey, filterValue] of Object.entries(props.filters)) {
+            if (filterValue.length !== 0 && !filterValue.every(val => object[filterKey].includes(val))) {
+                return false;
+            }
+        }
+        return true;
+    });
+
     function setFilters(value, type) {
         props.updateFilters(value, type)
     }
 
-
     return (
         <div className='flex flex-col gap-6 bg-lightGrayishCyan py-20'>
-            {jsonFile.map(job => (
+            {filteredItems.map(job => (
                 <div key={job.id} className={`flex flex-row justify-between items-center bg-white w-3/4 self-center p-6 rounded drop-shadow-lg ${job.featured ? 'border-l-4 border-desaturatedDark' : undefined}`}>
                     <div className='flex flex-row gap-5'>
                         <div><img src={job.logo} alt={job.company} /></div>
