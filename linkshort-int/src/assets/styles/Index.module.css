@@ -1,3 +1,74 @@
-.greenDiv {
-  background: green;
+.description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.description h2 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.description p {
+  font-size: 1.4rem;
+  color: gray;
+}
+
+.description button {
+  padding: 15px 35px 15px 35px;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistics h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.statistics p {
+  font-weight: 500;
+  font-size: 1rem;
+  color: gray;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.features div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 4% 0 4%;
+}
+
+.boost {
+  background-color: var(--darkViolet);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  gap: 20px;
+}
+
+.boost h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.boost button {
+  border: 1px solid white;
+  padding: 15px 30px 15px 30px;
 }
