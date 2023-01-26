@@ -6,22 +6,25 @@
 .footer div {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
-.footer span {
-  padding: 0;
-}
-
-.footer span:hover {
-  cursor: pointer;
-  color: var(--hover-color);
+.importantLinks {
+  display: flex;
+  flex-direction: row !important;
+  gap: 80px !important;
 }
 
 .linksList {
+  list-style: none;
   display: flex;
-  flex-direction: row !important;
-  gap: 50px !important;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.linksList li:hover {
+  cursor: pointer;
+  color: var(--hover-color);
 }
 
 .logo {
