@@ -3,6 +3,9 @@ import styles from "./assets/styles/Index.module.css";
 import Shorter from "./components/shorter";
 
 import illustration from "./assets/images/illustration-working.svg";
+import recognitionIcon from "./assets/images/icon-brand-recognition.svg";
+import recordedIcon from "./assets/images/icon-detailed-records.svg";
+import customIcon from "./assets/images/icon-fully-customizable.svg";
 
 function App() {
   return (
@@ -28,20 +31,31 @@ function App() {
       </div>
       <div className={styles.features}>
         <div>
+          <div className={styles.featureIcons}>
+            <img src={recognitionIcon} alt="" />
+          </div>
           <h2>Brand Recognition</h2>
           <p>
             Boost your brand recognition with each click. Generic links don’t
             mean a thing. Branded links help instil confidence in your content.
           </p>
         </div>
+        <div className={styles.featuresLine}></div>
         <div>
+          <div className={styles.featureIcons}>
+            <img src={recordedIcon} alt="" />
+          </div>
           <h2>Detailed Records</h2>
           <p>
             Gain insights into who is clicking your links. Knowing when and
             where people engage with your content helps inform better decisions.
           </p>
         </div>
+        <div className={styles.featuresLine}></div>
         <div>
+          <div className={styles.featureIcons}>
+            <img src={customIcon} alt="" />
+          </div>
           <h2>Fully Customizable</h2>
           <p>
             Improve brand awareness and content discoverability through

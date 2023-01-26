@@ -1,6 +1,13 @@
 import styles from "../assets/styles/Footer.module.css";
 import logo from "../assets/logo.svg";
 
+import {
+  FaTwitter,
+  FaFacebookSquare,
+  FaPinterest,
+  FaInstagram,
+} from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -33,12 +40,22 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <ul>
-        <li>Facebook</li>
-        <li>Twitter</li>
-        <li>Pintrest</li>
-        <li>Instagram</li>
-      </ul>
+      <div>
+        <ul className={styles.socials}>
+          <li>
+            <FaFacebookSquare size={24} className={styles.socialsIcons} />
+          </li>
+          <li>
+            <FaTwitter size={24} className={styles.socialsIcons} />
+          </li>
+          <li>
+            <FaPinterest size={24} className={styles.socialsIcons} />
+          </li>
+          <li>
+            <FaInstagram size={24} className={styles.socialsIcons} />
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 }

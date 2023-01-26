@@ -42,18 +42,37 @@
 .features {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  margin: 0 4% 0 4%;
+  align-items: center;
 }
 
 .features div {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
-  margin: 0 4% 0 4%;
+}
+
+.featuresLine {
+  background-color: var(--cyan) !important;
+  border: 0;
+  border-radius: 0 !important ;
+  padding: 10px !important;
+}
+
+.featureIcons {
+  background-color: var(--darkViolet) !important;
+  padding: 20px;
+  border-radius: 50% !important;
+  width: fit-content;
+  position: relative;
+  top: -4rem !important;
 }
 
 .boost {
   background-color: var(--darkViolet);
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,6 +88,5 @@
 }
 
 .boost button {
-  border: 1px solid white;
   padding: 15px 30px 15px 30px;
 }
