@@ -1,5 +1,6 @@
 :root {
-  --hover-color: hsl(180, 66%, 49%);
+  --hover-color: hsl(179, 56%, 75%);
+  --cyan: hsl(180, 66%, 49%);
   --darkViolet: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
   --gray: hsl(0, 0%, 75%);
@@ -15,14 +16,14 @@
 }
 
 #root {
-  background: linear-gradient(to bottom, #ffffff 30%, hsl(230, 25%, 95%) 70%);
+  background: linear-gradient(to bottom, #ffffff 20%, hsl(230, 25%, 95%) 80%);
   font-family: sans-serif;
 }
 
 header,
 main,
 footer {
-  padding: 20px 0 20px 0;
+  padding: 20px 0 0 0;
 }
 
 header {
@@ -49,7 +50,7 @@ footer {
 }
 
 button {
-  background-color: var(--darkViolet);
+  background-color: var(--cyan);
   padding: 15px;
   color: white;
   border: none;
@@ -59,6 +60,6 @@ button {
   margin: 5px;
 }
 
-button:hover {
+button:active {
   background-color: var(--hover-color);
 }

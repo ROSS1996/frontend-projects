@@ -8,9 +8,9 @@ export default function Header() {
       <img src={logo} alt="Logo" className={styles.logo} />
       <div className={styles.options}>
         <ul className={styles.linksList}>
-          <span>Features</span>
-          <span>Pricing</span>
-          <span>Resources</span>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Resources</li>
         </ul>
         <div className={styles.account}>
           <button className={styles.login}>Login</button>

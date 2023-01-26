@@ -1,17 +1,19 @@
-.button {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 15px;
-}
-
 .form {
   display: flex;
   flex-direction: row;
   gap: 10px;
   background-color: var(--darkViolet);
+  background-image: url("../images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 40px;
   border-radius: 8px;
   margin: 0 4% 0 4%;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .input {

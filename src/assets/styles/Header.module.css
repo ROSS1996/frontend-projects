@@ -34,4 +34,9 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  list-style-type: none;
+}
+
+.linksList li {
+  cursor: pointer;
 }
