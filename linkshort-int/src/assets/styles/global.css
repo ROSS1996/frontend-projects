@@ -47,6 +47,7 @@ footer {
   height: 15%;
   background-color: var(--veryDarkViolet);
   color: var(--lightGrayish);
+  padding: 2%;
 }
 
 button {

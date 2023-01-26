@@ -13,31 +13,31 @@ export default function Footer() {
     <footer className={styles.footer}>
       <img src={logo} alt="Logo" className={styles.logo} />
 
-      <div className={styles.linksList}>
+      <div className={styles.importantLinks}>
         <div>
           <h3>Features</h3>
-          <div>
-            <span>Link Shortening</span>
-            <span>Branded Links</span>
-            <span>Analytics</span>
-          </div>
+          <ul className={styles.linksList}>
+            <li>Link Shortening</li>
+            <li>Branded Links</li>
+            <li>Analytics</li>
+          </ul>
         </div>
         <div>
           <h3>Resources </h3>
-          <div>
-            <span>Blog</span>
-            <span>Developers</span>
-            <span>Support</span>
-          </div>
+          <ul className={styles.linksList}>
+            <li>Blog</li>
+            <li>Developers</li>
+            <li>Support</li>
+          </ul>
         </div>
         <div>
           <h3>Company</h3>
-          <div>
-            <span>About</span>
-            <span>Our Team</span>
-            <span>Careers</span>
-            <span>Contact</span>
-          </div>
+          <ul className={styles.linksList}>
+            <li>About</li>
+            <li>Our Team</li>
+            <li>Careers</li>
+            <li>Contact</li>
+          </ul>
         </div>
       </div>
       <div>
