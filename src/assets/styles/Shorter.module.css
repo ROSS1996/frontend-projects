@@ -9,6 +9,7 @@
   padding: 40px;
   border-radius: 8px;
   margin: 0 4% 0 4%;
+  width: 88%;
 }
 
 .button {
@@ -25,4 +26,56 @@
   outline: 0;
   font-size: 1rem;
   padding: 15px;
+}
+
+.shorter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  gap: 10px;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: 1px solid black !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 10px 30px;
+}
+
+.link a {
+  text-decoration: none;
+}
+
+.link div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.originalLink {
+  color: black;
+}
+
+.shortLink {
+  color: var(--cyan);
+}
+
+.link button {
+  border-radius: 5px;
+  padding: 10px 20px;
 }
