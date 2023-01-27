@@ -90,6 +90,7 @@ export default function Shorter() {
             <a href={link.result.original_link} target="_blank">
               <span className="originalLink">{link.result.original_link}</span>
             </a>
+            <hr />
             <div>
               <a href={link.result.full_short_link} target="_blank">
                 <span className="shortLink">{link.result.full_short_link}</span>
