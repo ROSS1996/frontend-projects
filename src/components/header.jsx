@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import { RiMenuFill } from "react-icons/ri";
 
 import logo from "../assets/logo.svg";
@@ -20,27 +18,8 @@ function DesktopMenu() {
   );
 }
 
-export default function Header() {
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-      console.log(windowDimensions);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+export default function Header(props) {
+  const { windowDimensions } = props;
 
   return (
     <header>
