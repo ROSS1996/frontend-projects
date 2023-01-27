@@ -1,0 +1,315 @@
+/* Globals */
+:root {
+  --cyan: hsl(180, 66%, 49%);
+  --darkViolet: hsl(257, 27%, 26%);
+  --red: hsl(0, 87%, 67%);
+  --gray: hsl(0, 0%, 75%);
+  --grayishViolet: hsl(257, 7%, 63%);
+  --veryDarkBlue: hsl(255, 11%, 22%);
+  --veryDarkViolet: hsl(260, 8%, 14%);
+  --lightGrayish: hsl(230, 25%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background: linear-gradient(to bottom, #ffffff 20%, hsl(230deg, 25%, 95%) 80%);
+  font-family: "Poppins", sans-serif;
+}
+
+header,
+main,
+footer {
+  padding: 20px 0 0 0;
+}
+
+button {
+  background-color: var(--cyan);
+  padding: 15px;
+  color: white;
+  border: none;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 5px;
+}
+button:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+/* Header */
+header {
+  height: 5%;
+  display: grid;
+  grid-template-columns: -webkit-max-content 2fr;
+  grid-template-columns: max-content 2fr;
+  align-items: center;
+  align-content: center;
+  gap: 40px;
+  margin: 0 4% 0 4%;
+}
+header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+header div ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style-type: none;
+}
+header div ul li {
+  cursor: pointer;
+}
+header div div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+header div div #login {
+  background-color: transparent;
+  color: black;
+  color: gray;
+  font-weight: 600;
+  padding: 0;
+}
+header div div #signUp {
+  padding: 15px 25px 15px 25px;
+}
+
+/* Main */
+main {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  /* Shorter */
+}
+main .description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin: 0 4% 0 4%;
+}
+main .description h2 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+main .description p {
+  font-size: 1.4rem;
+  color: gray;
+}
+main .description button {
+  padding: 15px 35px 15px 35px;
+}
+main .description img {
+  width: 50%;
+}
+main .statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+main .statistics h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+main .statistics p {
+  font-weight: 500;
+  font-size: 1rem;
+  color: gray;
+}
+main .features {
+  display: flex;
+  flex-direction: row;
+  margin: 0 4% 0 4%;
+  align-items: center;
+}
+main .features div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+main .features .line {
+  background-color: var(--cyan);
+  border: 0;
+  border-radius: 0;
+  padding: 4px 15px;
+}
+main .features .icon {
+  background-color: var(--darkViolet);
+  padding: 20px;
+  border-radius: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  top: -4rem;
+}
+main .boost {
+  background-color: var(--darkViolet);
+  background-image: url("./images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  gap: 20px;
+}
+main .boost h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+main .boost button {
+  padding: 15px 30px 15px 30px;
+}
+main .shorter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .shorter form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: var(--darkViolet);
+  background-image: url("./images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 0 4% 0 4%;
+  width: 88%;
+}
+main .shorter form input {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 90%;
+  text-indent: 10px;
+  outline: 0;
+  font-size: 1rem;
+  padding: 15px;
+  font-weight: 600;
+}
+main .shorter form .invalid {
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+main .shorter form .invalid::-moz-placeholder {
+  color: var(--red);
+  opacity: 1;
+}
+main .shorter form .invalid:-ms-input-placeholder {
+  color: var(--red);
+  opacity: 1;
+}
+main .shorter form .invalid::placeholder {
+  color: var(--red);
+  opacity: 1;
+}
+main .shorter form button {
+  border-radius: 5px;
+  padding: 15px;
+}
+main .shorter .linksList {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  gap: 10px;
+}
+main .shorter .linksList .link {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 10px 30px;
+}
+main .shorter .linksList .link a {
+  text-decoration: none;
+}
+main .shorter .linksList .link div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+main .shorter .linksList .link .originalLink {
+  color: black;
+}
+main .shorter .linksList .link .shortLink {
+  color: var(--cyan);
+}
+main .shorter .linksList .link button {
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+/* Footer */
+footer {
+  height: 15%;
+  background-color: var(--veryDarkViolet);
+  color: var(--lightGrayish);
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+}
+footer li:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+footer .importantLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+footer .importantLinks div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .importantLinks div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .socials {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style-type: none;
+  align-items: center;
+}
+footer .socials .icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  color: white;
+  cursor: pointer;
+}
+footer .socials .icon:hover {
+  color: cyan;
+}/*# sourceMappingURL=styles.css.map */
