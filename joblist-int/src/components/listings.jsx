@@ -33,9 +33,9 @@ export default function Listings(props) {
               <h2 className="text-base font-bold md:text-lg ">{job.position}</h2>
               <div className="text-darkGrayishCyan flex flex-row gap-3">
                 <span className="text-xs md:text-base">{job.postedAt}</span>
-                <span className="text-xs md:text-base">.</span>
+                <span className="text-xs md:text-base">•</span>
                 <span className="text-xs md:text-base">{job.contract}</span>
-                <span className="text-xs md:text-base">.</span>
+                <span className="text-xs md:text-base">•</span>
                 <span className="text-xs md:text-base">{job.location}</span>
               </div>
             </div>
