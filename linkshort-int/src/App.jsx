@@ -1,5 +1,4 @@
 import Layout from "./components/layout";
-import styles from "./assets/styles/Index.module.css";
 import Shorter from "./components/shorter";
 
 import illustration from "./assets/images/illustration-working.svg";
@@ -10,7 +9,7 @@ import customIcon from "./assets/images/icon-fully-customizable.svg";
 function App() {
   return (
     <Layout>
-      <div className={styles.description}>
+      <div className="description">
         <div>
           <h2>More than just shorter links</h2>
           <p>
@@ -22,16 +21,16 @@ function App() {
         <img src={illustration} alt="Illustration" />
       </div>
       <Shorter />
-      <div className={styles.statistics}>
+      <div className="statistics">
         <h2>Advanced Statistics</h2>
         <p>
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
       </div>
-      <div className={styles.features}>
+      <div className="features">
         <div>
-          <div className={styles.featureIcons}>
+          <div className="icon">
             <img src={recognitionIcon} alt="" />
           </div>
           <h2>Brand Recognition</h2>
@@ -40,9 +39,9 @@ function App() {
             mean a thing. Branded links help instil confidence in your content.
           </p>
         </div>
-        <div className={styles.featuresLine}></div>
+        <div className="line"></div>
         <div>
-          <div className={styles.featureIcons}>
+          <div className="icon">
             <img src={recordedIcon} alt="" />
           </div>
           <h2>Detailed Records</h2>
@@ -51,9 +50,9 @@ function App() {
             where people engage with your content helps inform better decisions.
           </p>
         </div>
-        <div className={styles.featuresLine}></div>
+        <div className="line"></div>
         <div>
-          <div className={styles.featureIcons}>
+          <div className="icon">
             <img src={customIcon} alt="" />
           </div>
           <h2>Fully Customizable</h2>
@@ -63,7 +62,7 @@ function App() {
           </p>
         </div>
       </div>
-      <div className={styles.boost}>
+      <div className="boost">
         <h2>Boost your links today</h2>
         <button>Get Started</button>
       </div>

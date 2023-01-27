@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import styles from "../assets/styles/Shorter.module.css";
 import ClipboardJS from "clipboard";
 
 export default function Shorter() {
   const [links, setLinks] = useState([]);
   const [url, setUrl] = useState("");
+  const [lastBtn, setLastBtn] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -14,9 +14,14 @@ export default function Shorter() {
       const response = await fetch(api);
       const data = await response.json();
 
+      const input = document.getElementById("ogLink");
+      input.value = "";
       if (!data.ok) {
+        input.placeholder = data.error;
+        input.classList.add("invalid");
         alert(data.error);
       } else {
+        input.classList.remove("invalid");
         saveLinks(data);
       }
     } catch (error) {
@@ -32,11 +37,21 @@ export default function Shorter() {
     });
 
     clipboard.on("success", function (e) {
+      if (lastBtn) {
+        lastBtn.innerText = "Copy";
+        lastBtn.style.backgroundColor = "";
+      }
       button.innerText = "Copied!";
       button.style.backgroundColor = "var(--darkViolet)";
+      setLastBtn(button);
       e.clearSelection();
     });
   };
+
+  function handleChange(input) {
+    input.classList.remove("invalid");
+    setUrl(input.value);
+  }
 
   function saveLinks(data) {
     setLinks([data, ...links]);
@@ -57,36 +72,27 @@ export default function Shorter() {
   }, []);
 
   return (
-    <div className={styles.shorter}>
-      <form
-        className={styles.form}
-        type="url"
-        value={url}
-        onSubmit={handleSubmit}
-      >
+    <div className="shorter">
+      <form type="url" value={url} onSubmit={handleSubmit}>
         <input
           type="text"
-          name=""
-          id=""
+          name="link"
+          id="ogLink"
           placeholder="Shorten a link here..."
-          className={styles.input}
-          onChange={(e) => setUrl(e.target.value)}
+          onChange={(e) => handleChange(e.target)}
+          required
         />
-        <button className={styles.button}>Shorten It!</button>
+        <button className="button">Shorten It!</button>
       </form>
-      <ul className={styles.linksList}>
+      <ul className="linksList">
         {links.map((link) => (
-          <li key={link.result.code} className={styles.link}>
+          <li key={link.result.code} className="link">
             <a href={link.result.original_link} target="_blank">
-              <span className={styles.originalLink}>
-                {link.result.original_link}
-              </span>
+              <span className="originalLink">{link.result.original_link}</span>
             </a>
             <div>
               <a href={link.result.full_short_link} target="_blank">
-                <span className={styles.shortLink}>
-                  {link.result.full_short_link}
-                </span>
+                <span className="shortLink">{link.result.full_short_link}</span>
               </a>
               <button
                 onClick={(btn) =>
