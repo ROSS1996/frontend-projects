@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../assets/styles/Shorter.module.css";
 import ClipboardJS from "clipboard";
 
@@ -17,7 +17,7 @@ export default function Shorter() {
       if (!data.ok) {
         alert(data.error);
       } else {
-        setLinks([...links, data]);
+        saveLinks(data);
       }
     } catch (error) {
       alert(error.message);
@@ -37,6 +37,24 @@ export default function Shorter() {
       e.clearSelection();
     });
   };
+
+  function saveLinks(data) {
+    setLinks([data, ...links]);
+    const MAX_LINKS = 10;
+    let currentData = JSON.parse(localStorage.getItem("links")) || [];
+    currentData.unshift(data);
+    if (currentData.length > MAX_LINKS) {
+      currentData.pop();
+    }
+    localStorage.setItem("links", JSON.stringify(currentData));
+  }
+
+  useEffect(() => {
+    const savedLinks = JSON.parse(localStorage.getItem("links"));
+    if (savedLinks) {
+      setLinks(savedLinks);
+    }
+  }, []);
 
   return (
     <div className={styles.shorter}>
