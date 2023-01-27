@@ -29,7 +29,7 @@ function App() {
         </p>
       </div>
       <div className="features">
-        <div>
+        <div className="recognition">
           <div className="icon">
             <img src={recognitionIcon} alt="" />
           </div>
@@ -40,7 +40,7 @@ function App() {
           </p>
         </div>
         <div className="line"></div>
-        <div>
+        <div className="records">
           <div className="icon">
             <img src={recordedIcon} alt="" />
           </div>
@@ -51,7 +51,7 @@ function App() {
           </p>
         </div>
         <div className="line"></div>
-        <div>
+        <div className="customizable">
           <div className="icon">
             <img src={customIcon} alt="" />
           </div>

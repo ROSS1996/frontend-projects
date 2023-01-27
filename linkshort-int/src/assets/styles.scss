@@ -109,13 +109,14 @@ main {
     margin: 0 4% 0 4%;
 
     h2 {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 3rem;
     }
 
     p {
       font-size: 1.4rem;
       color: gray;
+      max-width: 600px;
     }
 
     button {
@@ -133,8 +134,8 @@ main {
     gap: 20px;
     justify-content: center;
     align-items: center;
-
-    h2 {
+    text-align: center;
+    text h2 {
       font-weight: 600;
       font-size: 1.6rem;
     }
@@ -142,19 +143,22 @@ main {
       font-weight: 500;
       font-size: 1rem;
       color: gray;
+      max-width: 400px;
     }
   }
 
   .features {
     display: flex;
     flex-direction: row;
-    margin: 0 4% 0 4%;
+    margin: 0 4% 5% 4%;
     align-items: center;
+    justify-content: center;
 
     div {
       background-color: white;
       padding: 20px;
       border-radius: 5px;
+      max-width: 400px;
     }
 
     .line {
@@ -171,6 +175,16 @@ main {
       width: fit-content;
       position: relative;
       top: -4rem;
+    }
+
+    .records {
+      position: relative;
+      top: 2rem;
+    }
+
+    .customizable {
+      position: relative;
+      top: 4rem;
     }
   }
 
@@ -267,6 +281,10 @@ main {
         a {
           text-decoration: none;
         }
+
+        hr {
+          display: none;
+        }
         div {
           display: flex;
           flex-direction: row;
@@ -337,6 +355,173 @@ footer {
       cursor: pointer;
       &:hover {
         color: cyan;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .hamburger {
+      cursor: pointer;
+    }
+  }
+
+  main {
+    .description {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 15px;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+
+      div {
+        text-align: center;
+      }
+
+      .line {
+        background-color: var(--cyan);
+        border: 0;
+        border-radius: 0;
+        padding: 60px 4px;
+      }
+
+      .icon {
+        padding: 20px;
+        top: -4rem;
+        right: -10rem;
+      }
+      .records,
+      .customizable {
+        position: static;
+      }
+    }
+
+    /* Shorter */
+
+    .shorter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 40px;
+        margin: 0 4% 0 4%;
+        width: 75%;
+
+        button,
+        input {
+          width: 90%;
+        }
+      }
+
+      .linksList {
+        display: flex;
+        flex-direction: column;
+        width: 88%;
+        gap: 10px;
+
+        .link {
+          flex-direction: column;
+          gap: 5px;
+
+          hr {
+            display: block;
+            width: 100%;
+          }
+
+          a {
+            text-decoration: none;
+          }
+          div {
+            flex-direction: column;
+            gap: 5px;
+          }
+          button {
+            border-radius: 5px;
+            padding: 10px 20px;
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+    .importantLinks {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    .description {
+      gap: 10px;
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .shorter {
+      form {
+        padding: 20px;
+        border-radius: 8px;
+        width: 75%;
+      }
+    }
+
+    .features {
+      .icon {
+        padding: 20px;
+        top: -4rem;
+        right: -5rem;
+      }
+    }
+
+    .boost {
+      text-align: center;
+      h2 {
+        color: white;
+        font-weight: 600;
+        font-size: 1.8rem;
+      }
+
+      button {
+        padding: 15px 30px 15px 30px;
       }
     }
   }

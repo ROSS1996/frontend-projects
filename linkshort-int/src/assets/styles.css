@@ -102,12 +102,13 @@ main .description {
   margin: 0 4% 0 4%;
 }
 main .description h2 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 3rem;
 }
 main .description p {
   font-size: 1.4rem;
   color: gray;
+  max-width: 600px;
 }
 main .description button {
   padding: 15px 35px 15px 35px;
@@ -121,8 +122,9 @@ main .statistics {
   gap: 20px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-main .statistics h2 {
+main .statistics text h2 {
   font-weight: 600;
   font-size: 1.6rem;
 }
@@ -130,17 +132,20 @@ main .statistics p {
   font-weight: 500;
   font-size: 1rem;
   color: gray;
+  max-width: 400px;
 }
 main .features {
   display: flex;
   flex-direction: row;
-  margin: 0 4% 0 4%;
+  margin: 0 4% 5% 4%;
   align-items: center;
+  justify-content: center;
 }
 main .features div {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
+  max-width: 400px;
 }
 main .features .line {
   background-color: var(--cyan);
@@ -157,6 +162,14 @@ main .features .icon {
   width: fit-content;
   position: relative;
   top: -4rem;
+}
+main .features .records {
+  position: relative;
+  top: 2rem;
+}
+main .features .customizable {
+  position: relative;
+  top: 4rem;
 }
 main .boost {
   background-color: var(--darkViolet);
@@ -250,6 +263,9 @@ main .shorter .linksList .link {
 main .shorter .linksList .link a {
   text-decoration: none;
 }
+main .shorter .linksList .link hr {
+  display: none;
+}
 main .shorter .linksList .link div {
   display: flex;
   flex-direction: row;
@@ -312,4 +328,143 @@ footer .socials .icon {
 }
 footer .socials .icon:hover {
   color: cyan;
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .hamburger {
+    cursor: pointer;
+  }
+  main {
+    /* Shorter */
+  }
+  main .description {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+  }
+  main .description img {
+    width: 70%;
+  }
+  main .features {
+    display: flex;
+    flex-direction: column;
+  }
+  main .features div {
+    text-align: center;
+  }
+  main .features .line {
+    background-color: var(--cyan);
+    border: 0;
+    border-radius: 0;
+    padding: 60px 4px;
+  }
+  main .features .icon {
+    padding: 20px;
+    top: -4rem;
+    right: -10rem;
+  }
+  main .features .records,
+main .features .customizable {
+    position: static;
+  }
+  main .shorter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  main .shorter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    margin: 0 4% 0 4%;
+    width: 75%;
+  }
+  main .shorter form button,
+main .shorter form input {
+    width: 90%;
+  }
+  main .shorter .linksList {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    gap: 10px;
+  }
+  main .shorter .linksList .link {
+    flex-direction: column;
+    gap: 5px;
+  }
+  main .shorter .linksList .link hr {
+    display: block;
+    width: 100%;
+  }
+  main .shorter .linksList .link a {
+    text-decoration: none;
+  }
+  main .shorter .linksList .link div {
+    flex-direction: column;
+    gap: 5px;
+  }
+  main .shorter .linksList .link button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 80%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .importantLinks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main .description {
+    gap: 10px;
+  }
+  main .description h2 {
+    font-size: 1.5rem;
+  }
+  main .description p {
+    font-size: 0.9rem;
+  }
+  main .shorter form {
+    padding: 20px;
+    border-radius: 8px;
+    width: 75%;
+  }
+  main .features .icon {
+    padding: 20px;
+    top: -4rem;
+    right: -5rem;
+  }
+  main .boost {
+    text-align: center;
+  }
+  main .boost h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  main .boost button {
+    padding: 15px 30px 15px 30px;
+  }
 }/*# sourceMappingURL=styles.css.map */
