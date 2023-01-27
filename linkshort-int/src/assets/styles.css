@@ -16,7 +16,7 @@
 }
 
 #root {
-  background: linear-gradient(to bottom, #ffffff 20%, hsl(230deg, 25%, 95%) 80%);
+  background: linear-gradient(to bottom, #ffffff 20%, hsl(0deg, 0%, 92%) 80%);
   font-family: "Poppins", sans-serif;
 }
 
@@ -252,7 +252,7 @@ main .shorter .linksList .link {
   display: flex;
   flex-direction: row;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
@@ -330,6 +330,11 @@ footer .socials .icon:hover {
   color: cyan;
 }
 
+@media only screen and (max-width: 1200px) {
+  footer .importantLinks {
+    padding: 0 15px;
+  }
+}
 @media only screen and (max-width: 800px) {
   header {
     display: flex;
@@ -370,7 +375,7 @@ footer .socials .icon:hover {
   main .features .icon {
     padding: 20px;
     top: -4rem;
-    right: -10rem;
+    right: -40%;
   }
   main .features .records,
 main .features .customizable {
@@ -386,13 +391,22 @@ main .features .customizable {
   main .shorter form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 40px;
     margin: 0 4% 0 4%;
     width: 75%;
   }
+  main .shorter form input {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  main .shorter form .invalid {
+    font-size: 0.7rem;
+  }
   main .shorter form button,
 main .shorter form input {
+    padding: 10px 0;
     width: 90%;
   }
   main .shorter .linksList {
@@ -400,6 +414,7 @@ main .shorter form input {
     flex-direction: column;
     width: 88%;
     gap: 10px;
+    padding: 10px;
   }
   main .shorter .linksList .link {
     flex-direction: column;
@@ -427,13 +442,14 @@ main .shorter form input {
     gap: 40px;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
   }
   footer .importantLinks {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10px;
+    gap: 15px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -451,10 +467,15 @@ main .shorter form input {
     border-radius: 8px;
     width: 75%;
   }
+  main .shorter input,
+main .shorter button {
+    padding: 10px 0;
+  }
   main .features .icon {
+    position: relative;
     padding: 20px;
     top: -4rem;
-    right: -5rem;
+    right: -33%;
   }
   main .boost {
     text-align: center;
