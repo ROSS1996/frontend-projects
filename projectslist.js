@@ -5,6 +5,7 @@ const projects = [
     { name: 'Social Media Dashboard with Themes', techs: ['HTML', 'CSS', 'Javascript'], folder: 'smdt-junior' },
     { name: 'IP Address Tracker', techs: ['HTML', 'CSS', 'Javascript'], folder: 'iptrack-int' },
     { name: 'Job listings with filter', techs: ['HTML', 'CSS', 'Javascript', 'React', 'Tailwind', 'Vite'], folder: 'joblist-int' },
+    { name: 'URL Shortening Page', techs: ['HTML', 'CSS', 'Javascript', 'React', 'Sass', 'Vite'], folder: 'linkshort-int' },
 ]
 
 for (project of projects) {
