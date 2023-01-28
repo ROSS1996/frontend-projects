@@ -75,9 +75,10 @@ export default function Shorter() {
 
   return (
     <div className="shorter">
-      <form type="url" value={url} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
-          type="text"
+          type="url"
+          value={url}
           name="link"
           id="ogLink"
           placeholder="Shorten a link here..."
