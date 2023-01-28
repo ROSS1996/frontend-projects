@@ -33,6 +33,7 @@ function App() {
           <div className="icon">
             <img src={recognitionIcon} alt="" />
           </div>
+
           <h2>Brand Recognition</h2>
           <p>
             Boost your brand recognition with each click. Generic links don’t

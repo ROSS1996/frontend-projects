@@ -1,4 +1,5 @@
-import { RiMenuFill } from "react-icons/ri";
+import { RiMenuFill, RiCloseFill } from "react-icons/ri";
+import { useState } from "react";
 
 import logo from "../assets/logo.svg";
 
@@ -18,17 +19,49 @@ function DesktopMenu() {
   );
 }
 
+function MobileMenu() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="hamburgerMenu">
+      {open ? (
+        <RiCloseFill
+          size={24}
+          className={`hamburger`}
+          onClick={() => setOpen(!open)}
+        />
+      ) : (
+        <RiMenuFill
+          size={24}
+          className={`hamburger`}
+          onClick={() => setOpen(!open)}
+        />
+      )}
+      {open && (
+        <nav className="mobile-menu">
+          <ul>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>Resources</li>
+          </ul>
+          <hr />
+          <div>
+            <span>Login</span>
+            <span>Sign Up</span>
+          </div>
+        </nav>
+      )}
+    </div>
+  );
+}
+
 export default function Header(props) {
   const { windowDimensions } = props;
 
   return (
     <header>
       <img src={logo} alt="Logo" />
-      {windowDimensions.width <= 800 ? (
-        <RiMenuFill size={24} className="hamburger" />
-      ) : (
-        <DesktopMenu />
-      )}
+      {windowDimensions.width <= 800 ? <MobileMenu /> : <DesktopMenu />}
     </header>
   );
 }
