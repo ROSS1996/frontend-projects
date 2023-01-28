@@ -22,6 +22,7 @@ export default function Shorter() {
         alert(data.error);
       } else {
         input.classList.remove("invalid");
+        input.placeholder = "Shorten a link here...";
         saveLinks(data);
       }
     } catch (error) {
@@ -50,6 +51,7 @@ export default function Shorter() {
 
   function handleChange(input) {
     input.classList.remove("invalid");
+    input.placeholder = "Shorten a link here...";
     setUrl(input.value);
   }
 
