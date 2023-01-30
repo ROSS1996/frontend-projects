@@ -46,17 +46,14 @@ for (project of projects) {
     let github = document.createElement('p')
     github.innerText = 'Code'
     let githubLink = document.createElement('a')
-    githubLink.href = 'https://github.com/ROSS1996/frontend-projects/tree/main/' + `${project.folder}`
+    githubLink.href = 'https://github.com/ROSS1996/frontend-projects/tree/' + `${project.folder}`
     githubLink.target = '_blank'
 
     let live = document.createElement('p')
     live.innerText = 'Preview'
     let liveLink = document.createElement('a')
-    if (project.techs.includes('Vite')) {
-        liveLink.href = 'https://ross1996.github.io/frontend-projects/' + `${project.folder}` + '/dist/'
-    } else {
-        liveLink.href = 'https://ross1996.github.io/frontend-projects/' + `${project.folder}`
-    }
+    liveLink.href = 'https://ross1996.github.io/frontend-projects/' + `${project.folder}`
+
 
     liveLink.target = '_blank'
 
