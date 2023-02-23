@@ -1,80 +1,162 @@
 const projects = [
-    { name: 'Profile Card Component', techs: ['HTML', 'CSS'], folder: 'pccomp-nb' },
-    { name: 'Product Preview Card', techs: ['HTML', 'CSS'], folder: 'ppcc-nb' },
-    { name: 'Interactive card details', techs: ['HTML', 'CSS', 'Javascript'], folder: 'icdf-junior' },
-    { name: 'Social Media Dashboard with Themes', techs: ['HTML', 'CSS', 'Javascript'], folder: 'smdt-junior' },
-    { name: 'IP Address Tracker', techs: ['HTML', 'CSS', 'Javascript'], folder: 'iptrack-int' },
-    { name: 'Job listings with filter', techs: ['HTML', 'CSS', 'Javascript', 'React', 'Tailwind', 'Vite'], folder: 'joblist-int' },
-    { name: 'URL Shortening Page', techs: ['HTML', 'CSS', 'Javascript', 'React', 'Sass', 'Vite'], folder: 'linkshort-int' },
-]
+  {
+    name: "Profile Card Component",
+    techs: ["HTML", "CSS"],
+    ssname: "pccomp-nb",
+    github: "https://github.com/ROSS1996/frontend-projects/tree/pccomp-nb",
+    preview: "https://ross1996.github.io/frontend-projects/pccomp-nb",
+  },
+  {
+    name: "Product Preview Card",
+    techs: ["HTML", "CSS"],
+    ssname: "ppcc-nb",
+    github: "https://github.com/ROSS1996/frontend-projects/tree/ppcc-nb",
+    preview: "https://ross1996.github.io/frontend-projects/ppcc-nb",
+  },
+  {
+    name: "Interactive card details",
+    techs: ["HTML", "CSS", "Javascript"],
+    ssname: "icdf-junior",
+    github: "https://github.com/ROSS1996/frontend-projects/tree/icdf-junior",
+    preview: "https://ross1996.github.io/frontend-projects/icdf-junior",
+  },
+  {
+    name: "Social Media Dashboard with Themes",
+    techs: ["HTML", "CSS", "Javascript"],
+    ssname: "smdt-junior",
+    github: "https://github.com/ROSS1996/frontend-projects/tree/smdt-junior",
+    preview: "https://ross1996.github.io/frontend-projects/smdt-junior",
+  },
+  {
+    name: "IP Address Tracker",
+    techs: ["HTML", "CSS", "Javascript"],
+    ssname: "iptrack-int",
+    github: "https://github.com/ROSS1996/frontend-projects/tree/iptrack-int",
+    preview: "https://ross1996.github.io/frontend-projects/iptrack-int",
+  },
+  {
+    name: "Job listings with filter",
+    techs: ["HTML", "TailwindCSS", "Javascript", "React"],
+    ssname: "joblist-int",
+    github: "https://github.com/ROSS1996/frontend-projects/tree/joblist-int",
+    preview: "https://ross1996.github.io/frontend-projects/joblist-int",
+  },
+  {
+    name: "URL Shortening Page",
+    techs: ["HTML", "CSS", "Javascript", "React", "Sass"],
+    ssname: "linkshort-int",
+    github: "https://github.com/ROSS1996/frontend-projects/tree/linkshort-int",
+    preview: "https://ross1996.github.io/frontend-projects/linkshort-int",
+  },
+  {
+    name: "eSports Page",
+    techs: ["HTML", "TailwindCSS", "Typescript", "React", "NextJS"],
+    ssname: "esports",
+    github: "https://github.com/ROSS1996/cs50xfinal",
+    preview: "https://cs50xfinal.vercel.app/",
+  },
+  {
+    name: "eCommerce",
+    techs: ["HTML", "TailwindCSS", "Javascript", "React"],
+    ssname: "ecommerce",
+    github: "https://github.com/ROSS1996/ecommerce",
+    preview: "https://ross1996.github.io/ecommerce/",
+  },
+  {
+    name: "Weather App",
+    techs: ["HTML", "CSS", "Javascript"],
+    ssname: "weather",
+    github: "https://github.com/ROSS1996/weatherapp",
+    preview: "https://ross1996.github.io/weatherapp/",
+  },
+  {
+    name: "Landing Page Template",
+    techs: ["HTML", "CSS"],
+    ssname: "landingpage",
+    github: "https://github.com/ROSS1996/lpage-template1",
+    preview: "https://ross1996.github.io/lpage-template1/",
+  },
+  {
+    name: "Curriculum Generator",
+    techs: ["HTML", "CSS", "Javascript", "React"],
+    ssname: "curriculum",
+    github: "https://github.com/ROSS1996/cvgenerator",
+    preview: "https://ross1996.github.io/cvgenerator/",
+  },
+  {
+    name: "Dashboard Template",
+    techs: ["HTML", "CSS"],
+    ssname: "dashboard",
+    github: "https://github.com/ROSS1996/dashboard-t1",
+    preview: "https://ross1996.github.io/dashboard-t1/",
+  },
+  {
+    name: "Web Calculator",
+    techs: ["HTML", "CSS", "Javascript"],
+    ssname: "calculator",
+    github: "https://github.com/ROSS1996/web-calculator",
+    preview: "https://ross1996.github.io/web-calculator/",
+  },
+];
 
 for (project of projects) {
-    const main = document.getElementById('projectsList')
+  const main = document.getElementById("projectsList");
 
-    let screenshot = document.createElement('img');
-    screenshot.classList.add('screenshot')
-    screenshot.src = "./screenshots/" + `${project.folder}` + ".jpeg"
-    screenshot.alt = project.name
+  let screenshot = document.createElement("img");
+  screenshot.classList.add("screenshot");
+  screenshot.src = "./screenshots/" + `${project.ssname}` + ".jpg";
+  screenshot.alt = project.name;
 
-    let projectName = document.createElement('h2')
-    projectName.innerText = project.name
+  let projectName = document.createElement("h2");
+  projectName.innerText = project.name;
 
+  let techsList = document.createElement("ul");
 
+  project.techs.forEach((tech) => {
+    let li = document.createElement("li");
+    li.innerText = tech;
+    techsList.appendChild(li);
+  });
 
+  let techs = document.createElement("div");
+  techs.classList.add("techs");
+  techs.appendChild(techsList);
 
-    let techsList = document.createElement('ul')
+  let links = document.createElement("div");
+  links.classList.add("links");
 
-    project.techs.forEach(tech => {
-        let li = document.createElement('li')
-        li.innerText = tech
-        techsList.appendChild(li)
-    })
+  let github = document.createElement("p");
+  github.innerText = "Code";
+  let githubLink = document.createElement("a");
+  githubLink.href = project.github;
+  githubLink.target = "_blank";
 
-    let techs = document.createElement('div')
-    techs.classList.add('techs')
+  let live = document.createElement("p");
+  live.innerText = "Preview";
+  let liveLink = document.createElement("a");
+  liveLink.href = project.preview;
 
-    let techsTitle = document.createElement('h3')
-    techsTitle.innerText = 'Techs'
+  liveLink.target = "_blank";
 
-    techs.appendChild(techsTitle)
-    techs.appendChild(techsList)
+  let infos = document.createElement("div");
+  infos.classList.add("infos");
 
+  let LinksList = document.createElement("div");
+  liveLink.appendChild(live);
+  githubLink.appendChild(github);
+  LinksList.appendChild(githubLink);
+  LinksList.appendChild(liveLink);
+  LinksList.classList.add("links");
 
-    let links = document.createElement('div')
-    links.classList.add('links')
+  infos.appendChild(projectName);
+  infos.appendChild(techs);
+  infos.appendChild(LinksList);
 
-    let github = document.createElement('p')
-    github.innerText = 'Code'
-    let githubLink = document.createElement('a')
-    githubLink.href = 'https://github.com/ROSS1996/frontend-projects/tree/' + `${project.folder}`
-    githubLink.target = '_blank'
+  let div = document.createElement("div");
+  div.classList.add("project");
 
-    let live = document.createElement('p')
-    live.innerText = 'Preview'
-    let liveLink = document.createElement('a')
-    liveLink.href = 'https://ross1996.github.io/frontend-projects/' + `${project.folder}`
+  div.appendChild(screenshot);
+  div.appendChild(infos);
 
-
-    liveLink.target = '_blank'
-
-    let infos = document.createElement('div')
-    infos.classList.add('infos')
-
-    liveLink.appendChild(live)
-    githubLink.appendChild(github)
-    infos.appendChild(projectName)
-    infos.appendChild(techs)
-    infos.appendChild(githubLink)
-    infos.appendChild(liveLink)
-
-
-    let div = document.createElement('div')
-    div.classList.add('project')
-
-
-    div.appendChild(screenshot)
-    div.appendChild(infos)
-
-
-    main.appendChild(div)
+  main.appendChild(div);
 }
