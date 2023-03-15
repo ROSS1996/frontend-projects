@@ -1,5 +1,22 @@
 const projects = [
   {
+    name: "Finance Manager",
+    techs: [
+      "HTML",
+      "TailwindCSS",
+      "Typescript",
+      "React",
+      "NextJS",
+      "PostgreSQL",
+      "Express.JS",
+      "Docker",
+    ],
+    ssname: "financemanager",
+    github: "https://github.com/ROSS1996/financemanager",
+    preview:
+      "https://github.com/ROSS1996/financemanager/tree/main/website/screenshots",
+  },
+  {
     name: "eSports Page",
     techs: ["HTML", "TailwindCSS", "Typescript", "React", "NextJS"],
     ssname: "esports",
